@@ -1,0 +1,109 @@
+<html>
+ <head>
+  	<title>CornoWeb</title>
+  	<meta charset="utf-8"/>
+	
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script type="text/javascript" src="js/login.js"></script>
+	
+	<link rel="icon" href="img/chapeu.ico" type="image/x-icon"/>
+	<link rel="Shortcut Icon" type="image/x-icon" href="img/chapeu.ico">    
+	
+	<script>
+		function logar() {
+			seu_login=document.getElementById("in_login").value;
+			sua_senha=document.getElementById("senha").value;
+			
+			for (i=0; i<6; i++){
+				if (seu_login==login_name[i] & sua_senha==senha_name[i]) {
+					document.write("<h1> Você está logado senhor "+login_name[i]+"</h1>");
+					break;
+				}
+			}
+				if (seu_login!=login_name[i] || sua_senha!=senha_name[i]) {
+				alert("Login ou senha incorretos.");
+				}
+		}
+	</script>
+
+  		<!-- Bootstrap CSS JS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ </head>
+
+ <body>
+	<!-- Image and text -->	
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/logo.png" width="45" height="35" class="d-inline-block align-top" alt="">
+    CornoWeb
+  </a>
+  		<!-- Barras de opções -->
+   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="cornologia.html"> Cornologia <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="teste.html">Teste Cornal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cornopedia.html">Cornopédia</a>
+      </li>
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Top Cornos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="top_cornos.html">Cornos do Mês</a>
+          <a class="dropdown-item" href="top_cornos.html">Cornos da Semana</a>
+          <a class="dropdown-item" href="top_cornos.html">Corno(of All Time)</a>
+		  <a class="dropdown-item" href="atividades da aula.html">Atividades</a>
+        </div>
+      </li>
+	</ul>
+   </div>
+    	<!-- Barra de pesquisa -->
+	<form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+  </form> 
+</nav> 
+
+			<!-- Começo da putaria / login e cadastro -->	
+<div class="container" id="register">
+	<h2>- Faça seu cadastro na conta CornoWeb -</h2> <br/>
+	
+	<h4> Seu nome: </h4>
+	<input type="text" name="nome" id="nome"> <br/> <br/>
+	<h4> Seu login: </h4>
+	<input type="text" value="@" name="login0" id="login0"> <br/> <br/>
+	<h4> Sua senha: </h4>
+	<input type="password" name="senha0" id="senha0"> <br/> <br/>
+	<h4> Confirmar senha: </h4>
+	<input type="password" name="senha2" id="senha2"> <br/> <br/>
+	
+	<input type="button" value="Registre" id="but_register" onclick="cadastrar()"> 
+</div> <br/> <br/> <br/>
+
+<div class="container" id="div_login">
+	<h2>- Faça seu login na conta CornoWeb -</h2> <br/>
+	
+	<h4> Seu login: </h4>
+	<input type="text" value="@" name="login" id="in_login"> <br/> <br/>
+	<h4> Sua senha: </h4>
+	<input type="password" name="senha" id="senha"> <br/> <br/>
+	
+	<input type="button" value="Entrar" id="entrar" onclick="logar()"> <br/>
+</div>
+
+	<div class="blockquote-footer">
+		<h3> Roda o pé na tua cara </h3>
+	</div>
+	
+  	<!-- Optional JavaScript -->
+  	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ </body>
+</html>

@@ -1,0 +1,47 @@
+body {
+	background-image: url("../img/corno.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% , 100%;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#register {
+	font-family: Palatino Linotype;
+	
+	border: 2px solid darkblue;
+	
+	position:absolute;
+	top: 10%;
+	left: 4%;
+	
+	background-color: lightblue;
+	
+	height: 520px;
+	width: 650px;
+}
+
+#div_login {
+	font-family: Palatino Linotype;
+	
+	border: 2px solid darkblue;
+	
+	position:absolute;
+	top: 10%;
+	right: 4%;
+	
+	background-color:lightblue;
+	
+	height: 300px;
+	width: 590px;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #191970;
+   color: #D3D3D3;
+   text-align: center;
+}

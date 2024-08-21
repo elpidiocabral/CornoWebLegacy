@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Atividade JS</title>
+	
+	<script>
+		function vindo(){
+			alert("Bem-vindo, seu corno");
+		}
+		function sair(){
+			alert("Quem sair é corno");
+		}
+	</script> 
+  </head>
+  
+  <body onload="vindo();" onunload="sair();">
+	<!-- Image and text -->	
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/logo.png" width="45" height="35" class="d-inline-block align-top" alt="">
+    CornoWeb
+  </a>
+  		<!-- Barras de opções -->
+   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="cornologia.html"> Cornologia <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="teste.html">Teste Cornal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cornopedia.html">Cornopédia</a>
+      </li>
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Top Cornos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="top_cornos.html">Cornos do Mês</a>
+          <a class="dropdown-item" href="top_cornos.html">Cornos da Semana</a>
+          <a class="dropdown-item" href="top_cornos.html">Corno(of All Time)</a>
+        </div>
+      </li>
+	</ul>
+   </div>
+    	<!-- Barra de pesquisa -->
+	<form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+  </form> 
+</nav> 
+
+		<!-- inicio do body -->
+	<center> <h1> - Atividade Prompt - </h1> </center> <br/>
+	
+	<script>
+		// chifre=prompt("Digite sua quantidade de chifre","");
+		
+		if (chifre>0) {
+			document.write("Você é corno demais");
+		} else {
+			document.write("Você não é corno");
+		}
+	</script>
+	
+	<p>Click the button to loop through the properties of an object.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var person = {fname:"John", lname:"Doe", age:25}; 
+    
+    var text = "";
+    var x;
+    for (x in person) {
+        text += person[x] + " ";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+	
+	<!-- <input type="button" value="Testar" id="teste" onclick="boi()"> -->
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

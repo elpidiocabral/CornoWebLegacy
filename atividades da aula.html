@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Cornopédia - CornoWeb</title>
+	
+	<script>
+		var data = new Date();
+		
+		get date()
+	</script>
+	
+	<script type="text/javascript">
+		function media(){
+			nome=document.getElementById("nome").value;
+			a=document.getElementById("a").value*1;
+			b=document.getElementById("b").value*1;
+			c=document.getElementById("c").value*1;
+			
+			z=(a+b+c)/3;
+			
+			// alert("a media é" +z);
+			document.getElementById("r").innerHTML = "<br/> <br/> <h3>A media do aluno "+nome+" é "+z+".</h3> <br/> <h3> As notas são: "+a+", "+b+" e "+c+" </h3>"
+		}
+		
+		function idade(){
+			nome=document.getElementById("nome").value;
+			dia=document.getElementById("dia").value*1;
+			mes=document.getElementById("mes").value*1;
+			ano=document.getElementById("ano").value*1;
+			
+			var data = new Date();
+			a=data.getDate();
+			b=data.getMonth()+1;
+			c=data.getFullYear();
+			
+			z=c-ano;
+			x=b-mes;
+			
+				if (x<0) {
+					document.getElementById("r2").innerHTML = "<br/> <h3> A idade do "+nome+" é: "+z+"</h3>"
+				}
+				else if (dia>=a){
+					if (x>=0) {
+					document.getElementById("r2").innerHTML = "<br/> <h3> A idade do "+nome+" é: "+(+z-1)+"</h3>s"
+					}
+					
+				} 
+			
+/*			data=2018-ano;
+			
+				if (mes>3){
+					data=data-1;
+					document.getElementById("r2").innerHTML = "<br/> <h3> A idade do aluno "+nome+" é "+data+" anos completos</h3>"
+				}
+				else if (dia>5){
+					data=data-1;
+					document.getElementById("r2").innerHTML = "<br/> <h3> A idade do aluno "+nome+" é "+data+" anos completos</h3>"
+				}
+				else {
+					document.getElementById("r2").innerHTML = "<br/> <h3> A idade do aluno "+nome+" é "+data+" anos completos</h3>"
+				} */
+		}
+		
+		function nomes(){
+			nome=document.getElementById("nome").value;
+			
+			document.getElementById("r3").innerHTML += "<br/> <h4> Nome: </h4>";
+				for (q=0; q<9; q++) {
+					document.getElementById("r3").innerHTML += ""+nome.charAt(q)+"";
+					//document.write(nome.charAt(q));
+				}
+			document.getElementById("r3").innerHTML += "<br/> <br/> <h4> Ao contrário: </h4>";
+				for (q=9; q>=0; q--) {
+					document.getElementById("r3").innerHTML += ""+nome.charAt(q)+"";
+				}
+		}	
+		
+		function reset(){
+			document.getElementById("r3").innerHTML = "<br/> <h4> </h4>";
+		}
+	</script>
+  </head>
+  
+  <body>
+	<!-- Image and text -->	
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/logo.png" width="45" height="35" class="d-inline-block align-top" alt="">
+    CornoWeb
+  </a>
+  		<!-- Barras de opções -->
+   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="cornologia.html"> Cornologia <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="teste.html">Teste Cornal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cornopedia.html">Cornopédia</a>
+      </li>
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Top Cornos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="top_cornos.html">Cornos do Mês</a>
+          <a class="dropdown-item" href="top_cornos.html">Cornos da Semana</a>
+          <a class="dropdown-item" href="top_cornos.html">Corno(of All Time)</a>
+        </div>
+      </li>
+	</ul>
+   </div>
+    	<!-- Barra de pesquisa -->
+	<form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
+  </form> 
+</nav> 
+
+		<!-- inicio do body -->
+	<center> <h1> - Atividade 1 - </h1> </center> <br/>
+	
+	<h3> Nome do Aluno: </h3> <br/>
+	
+	<input type="text" name="nome" id="nome"/> <br/> <br/>
+	
+	<h3> Digite aqui as três notas do "aluno": </h3> <br/>
+	
+	<input type="number" name="a" id="a"/> <br/>
+	<input type="number" name="b" id="b"/> <br/>
+	<input type="number" name="c" id="c"/> <br/> <br/>
+	
+	<input type="button" value="Calcular a média" onclick="media()"/>
+	
+	<div id="r">
+	</div>
+	
+	<center> <h1> - Atividade 2 - </h1> </center> <br/>
+	
+	<h3> Calcular Idade do aluno: </h3> <br/> 
+	<h5> Coloque dia, mês e ano respectivamente nas caixas </h5>
+	
+	<input type="number" name="dia" id="dia"/>
+	<input type="number" name="mes" id="mes"/> 
+	<input type="number" name="ano" id="ano"/> <br/> <br/>
+	
+	<input type="button" value="Calcular a idade" onclick="idade()"/>
+	
+	<div id="r2">
+	</div>
+
+	<center> <h1> - Atividade 3 - </h1> </center> <br/>
+	
+	<input type="button" value="Nomes" onclick="nomes()"/> 
+	<input type="button" value="Reset" onclick="reset()"/> <br/>
+	
+	<div id="r3">
+	</div>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
